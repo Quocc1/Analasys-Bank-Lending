@@ -1,0 +1,1564 @@
+﻿<Database xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>LoanBanking</ID>
+  <Name>LoanBanking</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <LastUpdate>0001-01-01T00:00:00Z</LastUpdate>
+  <DataSourceImpersonationInfo>
+    <ImpersonationMode>Default</ImpersonationMode>
+    <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+  </DataSourceImpersonationInfo>
+  <MiningStructures>
+    <MiningStructure>
+      <ID>Decision Tree</ID>
+      <Name>Decision Tree</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+          <Value>dbo_CustomerLoan</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+          <Value>
+            <dds xmlns="">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-9907" scrolltop="-3003" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="23453" y="11007" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <font>
+                  <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+                </font>
+                <mouseicon>
+                  <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                </mouseicon>
+              </diagram>
+              <layoutmanager>
+                <ddsxmlobj />
+              </layoutmanager>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="CustomerLoan" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3598" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e00000e0e000088130000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_CustomerLoan" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+            </dds>
+          </Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>-9907</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>-3003</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>20</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>Loan Banking</DataSourceViewID>
+      </Source>
+      <Columns>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Age</ID>
+          <Name>Age</Name>
+          <Type>Long</Type>
+          <Content>Continuous</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>age</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Car Ownership</ID>
+          <Name>Car Ownership</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>car_ownership</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Current House Yrs</ID>
+          <Name>Current House Yrs</Name>
+          <Type>Long</Type>
+          <Content>Continuous</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>current_house_yrs</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Current Job Yrs</ID>
+          <Name>Current Job Yrs</Name>
+          <Type>Long</Type>
+          <Content>Continuous</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>current_job_yrs</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Experience</ID>
+          <Name>Experience</Name>
+          <Type>Long</Type>
+          <Content>Continuous</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>experience</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>House Ownership</ID>
+          <Name>House Ownership</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>house_ownership</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Id</ID>
+          <Name>Id</Name>
+          <IsKey>true</IsKey>
+          <Type>Long</Type>
+          <Content>Key</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>id</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Income</ID>
+          <Name>Income</Name>
+          <Type>Long</Type>
+          <Content>Continuous</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>income</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Married Single</ID>
+          <Name>Married Single</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>married_single</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Profession</ID>
+          <Name>Profession</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>profession</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Risk Flag</ID>
+          <Name>Risk Flag</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>risk_flag</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>State</ID>
+          <Name>State</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>state</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+      </Columns>
+      <MiningModels>
+        <MiningModel>
+          <ID>Decision Tree</ID>
+          <Name>Decision Tree</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Algorithm>Microsoft_Decision_Trees</Algorithm>
+          <Columns>
+            <Column>
+              <ID>Age</ID>
+              <Name>Age</Name>
+              <SourceColumnID>Age</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>Car Ownership</ID>
+              <Name>Car Ownership</Name>
+              <SourceColumnID>Car Ownership</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Current House Yrs</ID>
+              <Name>Current House Yrs</Name>
+              <SourceColumnID>Current House Yrs</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>Current Job Yrs</ID>
+              <Name>Current Job Yrs</Name>
+              <SourceColumnID>Current Job Yrs</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>Experience</ID>
+              <Name>Experience</Name>
+              <SourceColumnID>Experience</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>House Ownership</ID>
+              <Name>House Ownership</Name>
+              <SourceColumnID>House Ownership</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Id</ID>
+              <Name>Id</Name>
+              <SourceColumnID>Id</SourceColumnID>
+              <Usage>Key</Usage>
+            </Column>
+            <Column>
+              <ID>Income</ID>
+              <Name>Income</Name>
+              <SourceColumnID>Income</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>Married Single</ID>
+              <Name>Married Single</Name>
+              <SourceColumnID>Married Single</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Profession</ID>
+              <Name>Profession</Name>
+              <SourceColumnID>Profession</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Risk Flag</ID>
+              <Name>Risk Flag</Name>
+              <SourceColumnID>Risk Flag</SourceColumnID>
+              <Usage>Predict</Usage>
+            </Column>
+            <Column>
+              <ID>State</ID>
+              <Name>State</Name>
+              <SourceColumnID>State</SourceColumnID>
+            </Column>
+          </Columns>
+        </MiningModel>
+      </MiningModels>
+      <ddl100_100:HoldoutMaxPercent>30</ddl100_100:HoldoutMaxPercent>
+    </MiningStructure>
+    <MiningStructure>
+      <ID>K-Means</ID>
+      <Name>K-Means</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+          <Value>dbo_CustomerLoan</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+          <Value>
+            <dds xmlns="">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-9907" scrolltop="-3003" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="23453" y="11007" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <font>
+                  <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+                </font>
+                <mouseicon>
+                  <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                </mouseicon>
+              </diagram>
+              <layoutmanager>
+                <ddsxmlobj />
+              </layoutmanager>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="CustomerLoan" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3598" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e00000e0e000088130000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_CustomerLoan" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+            </dds>
+          </Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>-9907</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>-3003</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>20</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>Loan Banking</DataSourceViewID>
+      </Source>
+      <Columns>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Age</ID>
+          <Name>Age</Name>
+          <Type>Long</Type>
+          <Content>Continuous</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>age</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Car Ownership</ID>
+          <Name>Car Ownership</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>car_ownership</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Current House Yrs</ID>
+          <Name>Current House Yrs</Name>
+          <Type>Long</Type>
+          <Content>Continuous</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>current_house_yrs</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Current Job Yrs</ID>
+          <Name>Current Job Yrs</Name>
+          <Type>Long</Type>
+          <Content>Continuous</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>current_job_yrs</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Experience</ID>
+          <Name>Experience</Name>
+          <Type>Long</Type>
+          <Content>Continuous</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>experience</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>House Ownership</ID>
+          <Name>House Ownership</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>house_ownership</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Id</ID>
+          <Name>Id</Name>
+          <IsKey>true</IsKey>
+          <Type>Long</Type>
+          <Content>Key</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>id</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Income</ID>
+          <Name>Income</Name>
+          <Type>Long</Type>
+          <Content>Continuous</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>income</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Married Single</ID>
+          <Name>Married Single</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>married_single</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Profession</ID>
+          <Name>Profession</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>profession</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Risk Flag</ID>
+          <Name>Risk Flag</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>risk_flag</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>State</ID>
+          <Name>State</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>state</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+      </Columns>
+      <MiningModels>
+        <MiningModel>
+          <ID>K-Means</ID>
+          <Name>K-Means</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Algorithm>Microsoft_Clustering</Algorithm>
+          <AlgorithmParameters>
+            <AlgorithmParameter>
+              <Name>CLUSTER_COUNT</Name>
+              <Value xsi:type="xsd:int">3</Value>
+            </AlgorithmParameter>
+            <AlgorithmParameter>
+              <Name>CLUSTERING_METHOD</Name>
+              <Value xsi:type="xsd:int">2</Value>
+            </AlgorithmParameter>
+          </AlgorithmParameters>
+          <Columns>
+            <Column>
+              <ID>Age</ID>
+              <Name>Age</Name>
+              <SourceColumnID>Age</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Car Ownership</ID>
+              <Name>Car Ownership</Name>
+              <SourceColumnID>Car Ownership</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Current House Yrs</ID>
+              <Name>Current House Yrs</Name>
+              <SourceColumnID>Current House Yrs</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Current Job Yrs</ID>
+              <Name>Current Job Yrs</Name>
+              <SourceColumnID>Current Job Yrs</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Experience</ID>
+              <Name>Experience</Name>
+              <SourceColumnID>Experience</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>House Ownership</ID>
+              <Name>House Ownership</Name>
+              <SourceColumnID>House Ownership</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Id</ID>
+              <Name>Id</Name>
+              <SourceColumnID>Id</SourceColumnID>
+              <Usage>Key</Usage>
+            </Column>
+            <Column>
+              <ID>Income</ID>
+              <Name>Income</Name>
+              <SourceColumnID>Income</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Married Single</ID>
+              <Name>Married Single</Name>
+              <SourceColumnID>Married Single</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Profession</ID>
+              <Name>Profession</Name>
+              <SourceColumnID>Profession</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Risk Flag</ID>
+              <Name>Risk Flag</Name>
+              <SourceColumnID>Risk Flag</SourceColumnID>
+              <Usage>Predict</Usage>
+            </Column>
+            <Column>
+              <ID>State</ID>
+              <Name>State</Name>
+              <SourceColumnID>State</SourceColumnID>
+            </Column>
+          </Columns>
+        </MiningModel>
+      </MiningModels>
+      <ddl100_100:HoldoutMaxPercent>30</ddl100_100:HoldoutMaxPercent>
+    </MiningStructure>
+    <MiningStructure>
+      <ID>Apriori</ID>
+      <Name>Apriori</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+          <Value>dbo_CustomerLoan</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+          <Value>
+            <dds xmlns="">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-9907" scrolltop="-3003" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="23453" y="11007" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <font>
+                  <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+                </font>
+                <mouseicon>
+                  <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                </mouseicon>
+              </diagram>
+              <layoutmanager>
+                <ddsxmlobj />
+              </layoutmanager>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="CustomerLoan" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3598" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e00000e0e000088130000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_CustomerLoan" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+            </dds>
+          </Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>-9907</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>-3003</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>20</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>Loan Banking</DataSourceViewID>
+      </Source>
+      <Columns>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Age</ID>
+          <Name>Age</Name>
+          <Type>Long</Type>
+          <Content>Discretized</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>age</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Car Ownership</ID>
+          <Name>Car Ownership</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>car_ownership</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Current House Yrs</ID>
+          <Name>Current House Yrs</Name>
+          <Type>Long</Type>
+          <Content>Discretized</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>current_house_yrs</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Current Job Yrs</ID>
+          <Name>Current Job Yrs</Name>
+          <Type>Long</Type>
+          <Content>Discretized</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>current_job_yrs</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Experience</ID>
+          <Name>Experience</Name>
+          <Type>Long</Type>
+          <Content>Discretized</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>experience</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>House Ownership</ID>
+          <Name>House Ownership</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>house_ownership</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Id</ID>
+          <Name>Id</Name>
+          <IsKey>true</IsKey>
+          <Type>Long</Type>
+          <Content>Key</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>id</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Income</ID>
+          <Name>Income</Name>
+          <Type>Long</Type>
+          <Content>Discretized</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>income</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Married Single</ID>
+          <Name>Married Single</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>married_single</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Profession</ID>
+          <Name>Profession</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>profession</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Risk Flag</ID>
+          <Name>Risk Flag</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>risk_flag</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>State</ID>
+          <Name>State</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>state</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+      </Columns>
+      <MiningModels>
+        <MiningModel>
+          <ID>Apriori</ID>
+          <Name>Apriori</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Algorithm>Microsoft_Association_Rules</Algorithm>
+          <Columns>
+            <Column>
+              <ID>Age</ID>
+              <Name>Age</Name>
+              <SourceColumnID>Age</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Car Ownership</ID>
+              <Name>Car Ownership</Name>
+              <SourceColumnID>Car Ownership</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Current House Yrs</ID>
+              <Name>Current House Yrs</Name>
+              <SourceColumnID>Current House Yrs</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Current Job Yrs</ID>
+              <Name>Current Job Yrs</Name>
+              <SourceColumnID>Current Job Yrs</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Experience</ID>
+              <Name>Experience</Name>
+              <SourceColumnID>Experience</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>House Ownership</ID>
+              <Name>House Ownership</Name>
+              <SourceColumnID>House Ownership</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Id</ID>
+              <Name>Id</Name>
+              <SourceColumnID>Id</SourceColumnID>
+              <Usage>Key</Usage>
+            </Column>
+            <Column>
+              <ID>Income</ID>
+              <Name>Income</Name>
+              <SourceColumnID>Income</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Married Single</ID>
+              <Name>Married Single</Name>
+              <SourceColumnID>Married Single</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Profession</ID>
+              <Name>Profession</Name>
+              <SourceColumnID>Profession</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Risk Flag</ID>
+              <Name>Risk Flag</Name>
+              <SourceColumnID>Risk Flag</SourceColumnID>
+              <Usage>Predict</Usage>
+            </Column>
+            <Column>
+              <ID>State</ID>
+              <Name>State</Name>
+              <SourceColumnID>State</SourceColumnID>
+            </Column>
+          </Columns>
+        </MiningModel>
+      </MiningModels>
+      <ddl100_100:HoldoutMaxPercent>30</ddl100_100:HoldoutMaxPercent>
+    </MiningStructure>
+    <MiningStructure>
+      <ID>Naive Bayes</ID>
+      <Name>Naive Bayes</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+          <Value>dbo_CustomerLoan</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+          <Value>
+            <dds xmlns="">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-9907" scrolltop="-3003" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="23453" y="11007" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <font>
+                  <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+                </font>
+                <mouseicon>
+                  <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                </mouseicon>
+              </diagram>
+              <layoutmanager>
+                <ddsxmlobj />
+              </layoutmanager>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="CustomerLoan" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3598" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e00000e0e000088130000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_CustomerLoan" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+            </dds>
+          </Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>-9907</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>-3003</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>20</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>Loan Banking</DataSourceViewID>
+      </Source>
+      <Columns>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Age</ID>
+          <Name>Age</Name>
+          <Type>Long</Type>
+          <Content>Discretized</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>age</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Car Ownership</ID>
+          <Name>Car Ownership</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>car_ownership</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Current House Yrs</ID>
+          <Name>Current House Yrs</Name>
+          <Type>Long</Type>
+          <Content>Discretized</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>current_house_yrs</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Current Job Yrs</ID>
+          <Name>Current Job Yrs</Name>
+          <Type>Long</Type>
+          <Content>Discretized</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>current_job_yrs</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Experience</ID>
+          <Name>Experience</Name>
+          <Type>Long</Type>
+          <Content>Discretized</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>experience</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>House Ownership</ID>
+          <Name>House Ownership</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>house_ownership</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Id</ID>
+          <Name>Id</Name>
+          <IsKey>true</IsKey>
+          <Type>Long</Type>
+          <Content>Key</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>id</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Income</ID>
+          <Name>Income</Name>
+          <Type>Long</Type>
+          <Content>Discretized</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <DataSize>-1</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>income</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Married Single</ID>
+          <Name>Married Single</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>married_single</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Profession</ID>
+          <Name>Profession</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>profession</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>Risk Flag</ID>
+          <Name>Risk Flag</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>risk_flag</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>State</ID>
+          <Name>State</Name>
+          <Type>Text</Type>
+          <Content>Discrete</Content>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_CustomerLoan</TableID>
+                <ColumnID>state</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+        </Column>
+      </Columns>
+      <MiningModels>
+        <MiningModel>
+          <ID>Naive Bayes</ID>
+          <Name>Naive Bayes</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Algorithm>Microsoft_Naive_Bayes</Algorithm>
+          <Columns>
+            <Column>
+              <ID>Age</ID>
+              <Name>Age</Name>
+              <SourceColumnID>Age</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Car Ownership</ID>
+              <Name>Car Ownership</Name>
+              <SourceColumnID>Car Ownership</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Current House Yrs</ID>
+              <Name>Current House Yrs</Name>
+              <SourceColumnID>Current House Yrs</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Current Job Yrs</ID>
+              <Name>Current Job Yrs</Name>
+              <SourceColumnID>Current Job Yrs</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Experience</ID>
+              <Name>Experience</Name>
+              <SourceColumnID>Experience</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>House Ownership</ID>
+              <Name>House Ownership</Name>
+              <SourceColumnID>House Ownership</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Id</ID>
+              <Name>Id</Name>
+              <SourceColumnID>Id</SourceColumnID>
+              <Usage>Key</Usage>
+            </Column>
+            <Column>
+              <ID>Income</ID>
+              <Name>Income</Name>
+              <SourceColumnID>Income</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Married Single</ID>
+              <Name>Married Single</Name>
+              <SourceColumnID>Married Single</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Profession</ID>
+              <Name>Profession</Name>
+              <SourceColumnID>Profession</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>Risk Flag</ID>
+              <Name>Risk Flag</Name>
+              <SourceColumnID>Risk Flag</SourceColumnID>
+              <Usage>Predict</Usage>
+            </Column>
+            <Column>
+              <ID>State</ID>
+              <Name>State</Name>
+              <SourceColumnID>State</SourceColumnID>
+            </Column>
+          </Columns>
+        </MiningModel>
+      </MiningModels>
+      <ddl100_100:HoldoutMaxPercent>30</ddl100_100:HoldoutMaxPercent>
+    </MiningStructure>
+  </MiningStructures>
+  <DataSources>
+    <DataSource xsi:type="RelationalDataSource">
+      <ID>Loan Banking</ID>
+      <Name>Loan Banking</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <ConnectionString>Provider=MSOLEDBSQL.1;Data Source=.;Integrated Security=SSPI;Initial Catalog=LoanBanking</ConnectionString>
+      <ConnectionStringSecurity>Unchanged</ConnectionStringSecurity>
+      <ImpersonationInfo>
+        <ImpersonationMode>ImpersonateServiceAccount</ImpersonationMode>
+        <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+      </ImpersonationInfo>
+      <Timeout>PT0S</Timeout>
+    </DataSource>
+  </DataSources>
+  <DataSourceViews>
+    <DataSourceView>
+      <ID>Loan Banking</ID>
+      <Name>Loan Banking</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+          <Value>_ALL_TABLES_</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+          <Value>
+            <Layouts xmlns="">
+              <Diagram>
+                <Name>_ALL_TABLES_</Name>
+                <DiagramLayout />
+                <ShowRelationshipNames>False</ShowRelationshipNames>
+                <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+                <DiagramViewPortLeft>0</DiagramViewPortLeft>
+                <DiagramViewPortTop>0</DiagramViewPortTop>
+                <DiagramBoundingLeft>0</DiagramBoundingLeft>
+                <DiagramBoundingTop>0</DiagramBoundingTop>
+                <DiagramZoom>100</DiagramZoom>
+              </Diagram>
+            </Layouts>
+          </Value>
+        </Annotation>
+      </Annotations>
+      <DataSourceID>Loan Banking</DataSourceID>
+      <Schema>
+        <xs:schema id="Loan_x0020_Banking" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+          <xs:element name="Loan_x0020_Banking" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="ba6c5d3f-ab00-46d9-971a-7f4099f198c2">
+            <xs:complexType>
+              <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="dbo_CustomerLoan" msprop:design-time-name="4acb2a75-69d5-4972-906b-cf947929c481" msprop:FriendlyName="CustomerLoan" msprop:DbSchemaName="dbo" msprop:DbTableName="CustomerLoan" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="id" msprop:design-time-name="7afcca41-84f0-4bbf-b671-15fdd73d908e" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                      <xs:element name="income" msprop:design-time-name="892a3671-7568-42a0-80c0-77517f4283b7" msprop:DbColumnName="income" msprop:FriendlyName="income" type="xs:int" minOccurs="0" />
+                      <xs:element name="age" msprop:design-time-name="c1a48ee5-56e4-44c6-bef5-63bc261b9d01" msprop:DbColumnName="age" msprop:FriendlyName="age" type="xs:int" minOccurs="0" />
+                      <xs:element name="experience" msprop:design-time-name="2d62d694-4140-42de-a45d-c9e150b627e5" msprop:DbColumnName="experience" msprop:FriendlyName="experience" type="xs:int" minOccurs="0" />
+                      <xs:element name="married_single" msprop:design-time-name="e6149027-a46f-40f4-9924-d3f051eeda8b" msprop:DbColumnName="married_single" msprop:FriendlyName="married_single" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="house_ownership" msprop:design-time-name="a5d4ce24-46e9-4daf-aa40-81466c3726e2" msprop:DbColumnName="house_ownership" msprop:FriendlyName="house_ownership" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="car_ownership" msprop:design-time-name="cc5b600f-760e-47af-94e7-c36e6e946234" msprop:DbColumnName="car_ownership" msprop:FriendlyName="car_ownership" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="profession" msprop:design-time-name="419a1030-7a13-4889-a28c-218d583fdb35" msprop:DbColumnName="profession" msprop:FriendlyName="profession" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="state" msprop:design-time-name="e422537d-7c7d-4da9-a4df-9b520b8743d1" msprop:DbColumnName="state" msprop:FriendlyName="state" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="current_job_yrs" msprop:design-time-name="6e84761d-2bad-4342-9ffc-700966d1e965" msprop:DbColumnName="current_job_yrs" msprop:FriendlyName="current_job_yrs" type="xs:int" minOccurs="0" />
+                      <xs:element name="current_house_yrs" msprop:design-time-name="6d6f4ffd-c2f5-4446-bd00-8350a5cb26a9" msprop:DbColumnName="current_house_yrs" msprop:FriendlyName="current_house_yrs" type="xs:int" minOccurs="0" />
+                      <xs:element name="risk_flag" msprop:design-time-name="35b49eda-f937-4362-8c86-8cc8734c270a" msprop:DbColumnName="risk_flag" msprop:FriendlyName="risk_flag" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:choice>
+            </xs:complexType>
+            <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_CustomerLoan" />
+              <xs:field xpath="id" />
+            </xs:unique>
+          </xs:element>
+        </xs:schema>
+        <Loan_x0020_Banking xmlns="" />
+      </Schema>
+    </DataSourceView>
+  </DataSourceViews>
+</Database>

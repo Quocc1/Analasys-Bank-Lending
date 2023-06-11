@@ -1,0 +1,842 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/22/2023 10:50:45 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-0VS9CH5"
+  DTS:CreatorName="DESKTOP-0VS9CH5\Quoc"
+  DTS:DTSID="{43CD9ABF-9E53-4CFC-ACA5-9B54F6D5BA18}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5209.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{EEEBEDC4-EF90-45A2-B4A6-9936393C175C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Create Table"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{8F60304B-0F78-433C-BDD5-ECD61440C571}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create Table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Create Table\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Create Table\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="{45E14758-595E-4356-8640-064161A49696}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[income]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[income]"
+                      length="50"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[income]"
+                      name="income"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[age]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[age]"
+                      length="50"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[age]"
+                      name="age"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[experience]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[experience]"
+                      length="50"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[experience]"
+                      name="experience"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[married_single]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[married_single]"
+                      length="50"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[married_single]"
+                      name="married_single"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[house_ownership]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[house_ownership]"
+                      length="50"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[house_ownership]"
+                      name="house_ownership"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[car_ownership]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[car_ownership]"
+                      length="50"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[car_ownership]"
+                      name="car_ownership"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[profession]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[profession]"
+                      length="50"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[profession]"
+                      name="profession"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[state]"
+                      length="50"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[state]"
+                      name="state"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[current_job_yrs]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[current_job_yrs]"
+                      length="50"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[current_job_yrs]"
+                      name="current_job_yrs"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[current_house_yrs]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[current_house_yrs]"
+                      length="50"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[current_house_yrs]"
+                      name="current_house_yrs"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[risk_flag]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[risk_flag]"
+                      length="50"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[risk_flag]"
+                      name="risk_flag"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      length="50"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[income]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="income" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="age" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[experience]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="experience" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[married_single]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="married_single" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[house_ownership]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="house_ownership" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[car_ownership]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="car_ownership" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[profession]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="profession" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="state" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[current_job_yrs]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="current_job_yrs" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[current_house_yrs]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="current_house_yrs" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[risk_flag]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="risk_flag" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Create Table\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Create Table\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[CustomerLoan]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Create Table\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{6512BC46-8D45-4B71-A985-2221024441A8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LocalHost LoanBanking]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[income]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="income"
+                      externalMetadataColumnId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[income]"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[income]" />
+                    <inputColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[age]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="age"
+                      externalMetadataColumnId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[age]"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[age]" />
+                    <inputColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[experience]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="experience"
+                      externalMetadataColumnId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[experience]"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[experience]" />
+                    <inputColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[married_single]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="married_single"
+                      externalMetadataColumnId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[married_single]"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[married_single]" />
+                    <inputColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[house_ownership]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="house_ownership"
+                      externalMetadataColumnId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[house_ownership]"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[house_ownership]" />
+                    <inputColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[car_ownership]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="car_ownership"
+                      externalMetadataColumnId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[car_ownership]"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[car_ownership]" />
+                    <inputColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[profession]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="profession"
+                      externalMetadataColumnId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[profession]"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[profession]" />
+                    <inputColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="state"
+                      externalMetadataColumnId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[state]" />
+                    <inputColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[current_job_yrs]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="current_job_yrs"
+                      externalMetadataColumnId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[current_job_yrs]"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[current_job_yrs]" />
+                    <inputColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[current_house_yrs]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="current_house_yrs"
+                      externalMetadataColumnId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[current_house_yrs]"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[current_house_yrs]" />
+                    <inputColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[risk_flag]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="risk_flag"
+                      externalMetadataColumnId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[risk_flag]"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[risk_flag]" />
+                    <inputColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      lineageId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output].Columns[id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[income]"
+                      dataType="i4"
+                      name="income" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[age]"
+                      dataType="i4"
+                      name="age" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[experience]"
+                      dataType="i4"
+                      name="experience" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[married_single]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="married_single" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[house_ownership]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="house_ownership" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[car_ownership]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="car_ownership" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[profession]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="profession" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="state" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[current_job_yrs]"
+                      dataType="i4"
+                      name="current_job_yrs" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[current_house_yrs]"
+                      dataType="i4"
+                      name="current_house_yrs" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[risk_flag]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="risk_flag" />
+                    <externalMetadataColumn
+                      refId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      dataType="i4"
+                      name="id" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Create Table\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Create Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Create Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Create Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Create Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Create Table.Paths[Flat File Source Output]"
+              endId="Package\Create Table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Create Table\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{D16FED54-3657-4381-829A-31F24B61B6E8}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6512BC46-8D45-4B71-A985-2221024441A8}"
+          SQLTask:SqlStatementSource="truncate table CustomerLoan" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{FB032116-E30F-4C95-9C49-C1A6EB6D758B}"
+      DTS:From="Package\Truncate Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Create Table" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\Create Table"
+          TopLeft="305.714286365071,196.52941159244" />
+        <NodeLayout
+          Size="148.8,41.6"
+          Id="Package\Truncate Table"
+          TopLeft="296.42857205959,93.2941175652829" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="372.871429212331,134.894117565283">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61.6352940271573"
+              Start="0,0"
+              End="0,54.1352940271573">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.1352940271573" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Create Table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Create Table\OLE DB Destination"
+          TopLeft="170.000000361885,204.176470409267" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Create Table\Flat File Source"
+          TopLeft="170.714286077692,102.470588145475" />
+        <EdgeLayout
+          Id="Package\Create Table.Paths[Flat File Source Output]"
+          TopLeft="245.914286077692,144.070588145475">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9.28571428419377,60.105882263792"
+              Start="0,0"
+              End="9.28571428419377,52.605882263792">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.052941131896" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.052941131896"
+                    Point2="0,30.052941131896"
+                    Point3="4,30.052941131896" />
+                  <mssgle:LineSegment
+                    End="5.28571428419377,30.052941131896" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.28571428419377,30.052941131896"
+                    Point2="9.28571428419377,30.052941131896"
+                    Point3="9.28571428419377,34.052941131896" />
+                  <mssgle:LineSegment
+                    End="9.28571428419377,52.605882263792" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Create Table\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

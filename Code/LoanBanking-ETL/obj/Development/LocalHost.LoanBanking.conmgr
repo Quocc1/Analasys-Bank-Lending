@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="LocalHost LoanBanking"
+  DTS:DTSID="{9F17C217-B25D-407F-98FC-5A321BA189EA}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=.;Initial Catalog=LoanBanking;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-LoanBanking-ETL-{9F17C217-B25D-407F-98FC-5A321BA189EA}LocalHost.LoanBanking;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

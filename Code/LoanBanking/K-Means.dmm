@@ -1,0 +1,359 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="433d6a51-a59d-497b-9845-64bcb0d66b3e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>K-Means</ID>
+  <Name>K-Means</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+      <Value>dbo_CustomerLoan</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-9907" scrolltop="-3003" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="23453" y="11007" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="CustomerLoan" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3598" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00000e0e000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_CustomerLoan" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-9907</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-3003</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="705478e2-e37e-412d-a15e-2ed3ab08f21b">
+    <DataSourceViewID>Loan Banking</DataSourceViewID>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="1d9a9722-431a-4f9d-888c-0e8a1f862a62">
+      <ID>Age</ID>
+      <Name>Age</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="355b6d15-5093-4480-8a18-1a8da10ec666">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a9c90fd0-a958-4043-9a38-20d5cec77d40">
+            <TableID>dbo_CustomerLoan</TableID>
+            <ColumnID>age</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="cd4dab50-e8de-46a8-a73c-5ec531ab8854">
+      <ID>Car Ownership</ID>
+      <Name>Car Ownership</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9cc091cd-d019-4921-b113-1e31bb916a2f">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="53ef1f6f-6325-438e-8471-010693b7687a">
+            <TableID>dbo_CustomerLoan</TableID>
+            <ColumnID>car_ownership</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="b3aab965-dcd4-46d1-ba47-86bf8ce03c79">
+      <ID>Current House Yrs</ID>
+      <Name>Current House Yrs</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d1895f27-8077-4227-bf8c-6594d92f1d07">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="78cc37f9-cef0-4c07-bb5f-91372e54cfb4">
+            <TableID>dbo_CustomerLoan</TableID>
+            <ColumnID>current_house_yrs</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="47fc80bb-bc05-4ea7-9ea8-93a9af17f73e">
+      <ID>Current Job Yrs</ID>
+      <Name>Current Job Yrs</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9a046619-3dcd-44cb-a193-18ab32cba342">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4c188138-eb27-468a-85b1-268ab8de6083">
+            <TableID>dbo_CustomerLoan</TableID>
+            <ColumnID>current_job_yrs</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="7b673982-1c7e-41e8-b17f-d8f32dda0b7d">
+      <ID>Experience</ID>
+      <Name>Experience</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cc86d89d-b449-428e-a080-bbacc60cc773">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a174851b-a33e-42df-96ba-6604f17751d6">
+            <TableID>dbo_CustomerLoan</TableID>
+            <ColumnID>experience</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="68a35e2c-2d2f-4fe0-98f5-05e21c85e6f0">
+      <ID>House Ownership</ID>
+      <Name>House Ownership</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b0757bf2-344a-4900-b247-694c219c4f13">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="54d29277-6d22-49e4-83d6-5e0fc80317ea">
+            <TableID>dbo_CustomerLoan</TableID>
+            <ColumnID>house_ownership</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="a90e5dd0-787e-4ea2-8de6-f18a9f606164">
+      <ID>Id</ID>
+      <Name>Id</Name>
+      <IsKey>true</IsKey>
+      <Type>Long</Type>
+      <Content>Key</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3212bd9d-1ad3-4c29-a671-750a0bc15df9">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b8681267-46ec-4aea-b393-1c9fa23f3fa5">
+            <TableID>dbo_CustomerLoan</TableID>
+            <ColumnID>id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="a3c129e3-31f6-420a-96e4-63379ff01abc">
+      <ID>Income</ID>
+      <Name>Income</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="03cdff1b-4046-4f4b-a3f4-4cf255daeda9">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d6af3471-ff98-4167-b3e4-1afd78fa586f">
+            <TableID>dbo_CustomerLoan</TableID>
+            <ColumnID>income</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="9091bdd1-c446-468d-b0f9-da8711e25418">
+      <ID>Married Single</ID>
+      <Name>Married Single</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cf9fae1c-6c82-436b-8b0b-82f0a2e090fa">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cf03e874-936a-4a8b-9f7c-73bb55bde504">
+            <TableID>dbo_CustomerLoan</TableID>
+            <ColumnID>married_single</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="7dcb584e-2ec5-4783-bf26-01938f5af168">
+      <ID>Profession</ID>
+      <Name>Profession</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e3f7e521-2997-46ac-bdc9-e309e929fc83">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1cf421ba-75f2-4542-9a4c-5c29d5169277">
+            <TableID>dbo_CustomerLoan</TableID>
+            <ColumnID>profession</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="2b3b4bb4-0dfc-4a09-a2be-f84f9bce756f">
+      <ID>Risk Flag</ID>
+      <Name>Risk Flag</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3d609754-4069-44e0-92fd-1bdc735fbf0a">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d9c8b803-253a-4e5c-9952-069f7a4d7e9e">
+            <TableID>dbo_CustomerLoan</TableID>
+            <ColumnID>risk_flag</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="093f2285-b033-4bd3-81b4-295d719a3865">
+      <ID>State</ID>
+      <Name>State</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9628e964-6a7f-44fa-a5d6-4c6a5fe52c02">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e8bc81c5-307b-4fdb-b25f-67595fbe2b40">
+            <TableID>dbo_CustomerLoan</TableID>
+            <ColumnID>state</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="7afe2c2a-a8de-40d8-bf0d-0f6bef393648">
+      <ID>K-Means</ID>
+      <Name>K-Means</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Clustering</Algorithm>
+      <AlgorithmParameters>
+        <AlgorithmParameter>
+          <Name>CLUSTER_COUNT</Name>
+          <Value xsi:type="xsd:int">3</Value>
+        </AlgorithmParameter>
+        <AlgorithmParameter>
+          <Name>CLUSTERING_METHOD</Name>
+          <Value xsi:type="xsd:int">2</Value>
+        </AlgorithmParameter>
+      </AlgorithmParameters>
+      <Columns>
+        <Column dwd:design-time-name="d31b4e76-f9fd-4754-8a19-03d0b12e009d">
+          <ID>Age</ID>
+          <Name>Age</Name>
+          <SourceColumnID>Age</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="48199a39-1e97-4336-b146-6e8333cf984a">
+          <ID>Car Ownership</ID>
+          <Name>Car Ownership</Name>
+          <SourceColumnID>Car Ownership</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="0479e069-bbb8-4fb9-a87c-dd333b8add81">
+          <ID>Current House Yrs</ID>
+          <Name>Current House Yrs</Name>
+          <SourceColumnID>Current House Yrs</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ff08ffa6-81ab-4aef-8b62-6a20afd407c4">
+          <ID>Current Job Yrs</ID>
+          <Name>Current Job Yrs</Name>
+          <SourceColumnID>Current Job Yrs</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ed5b34cd-121f-43fc-b203-4f0f79f49849">
+          <ID>Experience</ID>
+          <Name>Experience</Name>
+          <SourceColumnID>Experience</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="f9ad89a2-6394-421e-96da-fd759a6140a7">
+          <ID>House Ownership</ID>
+          <Name>House Ownership</Name>
+          <SourceColumnID>House Ownership</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="56f37e73-9e2e-4883-b6c7-00fe057acaea">
+          <ID>Id</ID>
+          <Name>Id</Name>
+          <SourceColumnID>Id</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="4049b263-cda8-418a-9416-34683c91614e">
+          <ID>Income</ID>
+          <Name>Income</Name>
+          <SourceColumnID>Income</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="31a2e579-e92d-4c5c-966a-010a4ae929ba">
+          <ID>Married Single</ID>
+          <Name>Married Single</Name>
+          <SourceColumnID>Married Single</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="113e9c36-cf95-41c4-89ba-5bbda3bc7e13">
+          <ID>Profession</ID>
+          <Name>Profession</Name>
+          <SourceColumnID>Profession</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="1c092f88-22c9-4c02-8e9d-b0eb31b3b8a5">
+          <ID>Risk Flag</ID>
+          <Name>Risk Flag</Name>
+          <SourceColumnID>Risk Flag</SourceColumnID>
+          <Usage>Predict</Usage>
+        </Column>
+        <Column dwd:design-time-name="5762723c-dc54-4678-9c63-d745606f49fc">
+          <ID>State</ID>
+          <Name>State</Name>
+          <SourceColumnID>State</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+  </MiningModels>
+  <ddl100_100:HoldoutMaxPercent>30</ddl100_100:HoldoutMaxPercent>
+</MiningStructure>
